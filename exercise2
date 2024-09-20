@@ -1,0 +1,40 @@
+def calculate_missing_variable():
+    print("To calculate a missing variable using Ohm's Law, I need to know what you want to calculate.")
+    print("Please choose one of the following options:")
+    print("𐙚 Voltage (V)")
+    print("𐙚 Current (I)")
+    print("𐙚 Resistance (R)")
+
+    choice = input("Please respond with one of the above options (V, I, or R): ")
+
+    if choice.upper() == "V":
+        current = float(input("Enter the current (I) in amperes: "))
+        resistance = float(input("Enter the resistance (R) in ohms: "))
+        if resistance == 0:
+            print("Error: Division by zero is not allowed. Please enter a non-zero resistance value.")
+        else:
+            voltage = current * resistance
+            print(f"The voltage (V) is {voltage:.2f} volts.")
+
+    elif choice.upper() == "I":
+        voltage = float(input("Enter the voltage (V) in volts: "))
+        resistance = float(input("Enter the resistance (R) in ohms: "))
+        if resistance == 0:
+            print("Error: Division by zero is not allowed. Please enter a non-zero resistance value.")
+        else:
+            current = voltage / resistance
+            print(f"The current (I) is {current:.2f} amperes.")
+
+    elif choice.upper() == "R":
+        voltage = float(input("Enter the voltage (V) in volts: "))
+        current = float(input("Enter the current (I) in amperes: "))
+        if current == 0:
+            print("Error: Division by zero is not allowed. Please enter a non-zero current value.")
+        else:
+            resistance = voltage / current
+            print(f"The resistance (R) is {resistance:.2f} ohms.")
+
+    else:
+        print("Invalid choice. Please try again.")
+
+calculate_missing_variable()
