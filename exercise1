@@ -13,3 +13,4 @@ elif conversion_type == 2:
     print(f"{temperature}°F is equal to {result}°C")
 else:
     print("Invalid conversion type. Please try again.")
+
